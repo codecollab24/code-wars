@@ -1,17 +1,5 @@
 function duplicateCount(text){
-  let textArr = [...text.toLowerCase()];
-  let dict = {}
-  let dupCount = 0
-
-  textArr.forEach(el => {
-    Object.keys(dict).includes(el) ? dict[el] += 1 : dict[el] = 1
-  })
-  
-  Object.values(dict).forEach(el => {
-    if (el > 1) dupCount += 1
-  })
-
-  return dupCount
+  return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
 }
 
 console.log(duplicateCount("aabbcde"));
