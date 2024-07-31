@@ -1,5 +1,3 @@
-function duplicateCount(text){
-  return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+function order(words){
+  // ...
 }
-
-console.log(duplicateCount("aabbcde"));
